@@ -1,0 +1,2064 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>合同会社4U｜群馬・沼田の小さなお店向けホームページ制作</title>
+  <meta name="description" content="群馬・沼田の小さなお店向けのホームページ制作。簡単な質問に答えるだけで、お店に合わせた無料サンプルをお作りします。見てから決められます。">
+  <meta name="theme-color" content="#2e7d74">
+
+  <!-- SNS・LINEでシェアしたときの見え方（OGP）。本公開でトップに移す場合はURLを差し替えてください -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="合同会社4U">
+  <meta property="og:title" content="群馬・沼田の小さなお店向け｜ホームページ制作｜合同会社4U">
+  <meta property="og:description" content="簡単な質問に答えるだけで、お店に合わせた無料サンプルをお作りします。見てから決められます。">
+  <meta property="og:image" content="https://4u-studio.github.io/shop-lp/assets/about-desk.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://4u-studio.github.io/shop-lp/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="群馬・沼田の小さなお店向け｜ホームページ制作｜合同会社4U">
+  <meta name="twitter:description" content="簡単な質問に答えるだけで、お店に合わせた無料サンプルをお作りします。">
+  <meta name="twitter:image" content="https://4u-studio.github.io/shop-lp/assets/about-desk.png">
+
+  <!-- ファビコン（タブの小アイコン）。SVGなので別ファイル不要 -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232e7d74'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='%23ffffff' text-anchor='middle'%3E4U%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfaf5;
+      --bg-2: #f4f1e9;
+      --card: #ffffff;
+      --teal: #2e7d74;
+      --teal-2: #4e9a91;
+      --teal-ink: #214f49;
+      --line-green: #06c755;
+      --line-green-dark: #05a947;
+      --orange: #d97f47;
+      --orange-dark: #c06f3a;
+      --ink: #353d3b;
+      --muted: #707775;
+      --faint: #9aa29f;
+      --line: rgba(33, 79, 73, .13);
+      --line-2: rgba(33, 79, 73, .08);
+      --shadow-sm: 0 1px 2px rgba(33, 45, 43, .04), 0 8px 20px rgba(33, 45, 43, .05);
+      --shadow: 0 2px 6px rgba(33, 45, 43, .05), 0 20px 46px rgba(33, 45, 43, .09);
+      --round: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif;
+      --head: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      --radius: 14px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15.5px;
+      line-height: 1.9;
+      letter-spacing: .01em;
+      line-break: strict;
+      word-break: normal;
+      word-break: auto-phrase;
+      overflow-wrap: break-word;
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: var(--head);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: .015em;
+      line-break: strict;
+      overflow-wrap: normal;
+      word-break: auto-phrase;
+      text-wrap: balance;
+    }
+
+    :where(h1, h2, h3, p, li, dt, dd, summary, label, figcaption, small, span, strong, em, a, button) {
+      line-break: strict;
+      word-break: normal;
+      word-break: auto-phrase;
+      overflow-wrap: normal;
+    }
+
+    :where(.nav a, .btn, .eyebrow, .work-label, .badge, .pill, .req, .opt, .idx, .q) {
+      word-break: keep-all;
+      overflow-wrap: normal;
+    }
+
+    .nowrap { white-space: nowrap; }
+
+    :focus-visible {
+      outline: 3px solid var(--teal-2);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- layout ---------- */
+    .wrap {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 68px 0; }
+    .section.alt { background: var(--bg-2); }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      margin-bottom: 16px;
+      color: var(--teal-2);
+      font-family: var(--head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .26em;
+      text-indent: .26em;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: currentColor;
+      opacity: .55;
+    }
+
+    .sec-title {
+      margin-bottom: 16px;
+      color: var(--teal-ink);
+      font-size: 26px;
+      line-height: 1.5;
+      text-align: center;
+      word-break: normal;
+      word-break: auto-phrase;
+    }
+
+    .sec-lead {
+      max-width: 33em;
+      margin: 0 auto 40px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 2;
+      text-align: center;
+    }
+
+    /* ---------- header ---------- */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(251, 250, 245, .9);
+      border-bottom: 1px solid var(--line-2);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 62px;
+    }
+    .logo {
+      font-family: var(--round);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: .05em;
+      color: var(--teal-ink);
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 18px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .02em;
+      color: #fff;
+      background: var(--orange);
+      border-radius: 8px;
+      transition: background-color .18s ease, transform .12s ease;
+    }
+    .header-cta:hover { background: var(--orange-dark); }
+    .header-cta:active { transform: translateY(1px); }
+
+    /* ナビ + ハンバーガー（スマホ） */
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      padding: 8px;
+      background: rgba(251, 250, 245, .98);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+    .nav.open { display: flex; }
+    .nav a {
+      padding: 13px 14px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      border-radius: 8px;
+    }
+    .nav a:hover { background: rgba(46, 125, 116, .06); color: var(--teal-ink); }
+    .nav a.active { color: var(--teal-ink); font-weight: 700; background: rgba(46, 125, 116, .09); }
+    .nav .nav-line {
+      margin-top: 4px;
+      text-align: center;
+      color: #fff;
+      background: var(--line-green);
+      font-weight: 700;
+    }
+    .nav .nav-line:hover { background: var(--line-green-dark); color: #fff; }
+    .nav .nav-line.active { color: #fff; background: var(--line-green); }
+    .nav .nav-cta { margin-top: 4px; text-align: center; color: #fff; background: var(--orange); font-weight: 700; }
+    .nav .nav-cta:hover { background: var(--orange-dark); color: #fff; }
+    .nav .nav-cta.active { color: #fff; background: var(--orange); }
+    .hamburger {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin: 0 auto;
+      background: var(--teal-ink);
+      border-radius: 2px;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      min-height: 56px;
+      padding: 0 26px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: .03em;
+      line-height: 1.45;
+      text-align: center;
+      text-wrap: balance;
+      word-break: keep-all;
+      word-break: auto-phrase;
+      overflow-wrap: normal;
+      white-space: normal;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color .18s ease, transform .12s ease;
+    }
+    .btn.primary {
+      color: #fff;
+      background: var(--orange);
+      box-shadow: 0 6px 16px rgba(217, 127, 71, .26);
+    }
+    .btn.primary:hover { background: var(--orange-dark); }
+    .btn.primary:active { transform: translateY(1px); }
+    .btn .arrow {
+      width: 8px; height: 8px; flex: 0 0 auto;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+    }
+    .btn-center { display: flex; justify-content: center; }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 44px 0 56px; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: var(--teal-ink);
+      background: rgba(46, 125, 116, .09);
+      border-radius: 6px;
+    }
+    .hero h1 {
+      font-size: 30px;
+      line-height: 1.52;
+      color: var(--teal-ink);
+      letter-spacing: .025em;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(transparent 66%, rgba(217, 127, 71, .26) 0);
+      padding: 0 .04em;
+    }
+    .hero-sub {
+      margin: 20px 0 26px;
+      font-size: 15.5px;
+      color: var(--ink);
+      line-height: 1.95;
+    }
+    .hero-sub .nowrap { white-space: nowrap; }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+    .badges li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--teal-ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 7px;
+    }
+    .badges svg { width: 15px; height: 15px; color: var(--teal-2); flex: 0 0 auto; }
+
+    .hero-visual {
+      position: relative;
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 6% 2% 12%;
+      border-radius: 28px;
+      background: linear-gradient(155deg, rgba(78, 154, 145, .16), rgba(224, 138, 83, .10));
+      z-index: 0;
+    }
+    .hero-visual .frame {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 430px;
+      padding: 10px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero-visual img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: 58% 50%;
+      border-radius: 16px;
+    }
+    .hero-visual .caption {
+      margin-top: 12px;
+      font-size: 11.5px;
+      color: var(--faint);
+      letter-spacing: .04em;
+    }
+
+    /* ---------- icons ---------- */
+    .icon { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .icon-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(46, 125, 116, .07);
+      color: var(--teal);
+    }
+    .icon-badge svg { width: 23px; height: 23px; }
+
+    /* ---------- generic card ---------- */
+    .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 24px 22px;
+    }
+    .card h3 { font-size: 17px; color: var(--teal-ink); }
+    .card p { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.9; }
+
+    /* worries: horizontal head, lighter */
+    .worry { padding: 22px 22px; }
+    .worry .whead { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .worry .icon-badge { width: 26px; height: 26px; background: none; color: var(--teal-2); flex: 0 0 auto; }
+    .worry .icon-badge svg { width: 24px; height: 24px; }
+    .worry h3 { margin: 0; font-size: 16px; line-height: 1.5; }
+
+    /* reasons: numbered, top accent */
+    .reason { position: relative; padding-top: 26px; border-top: 3px solid rgba(78, 154, 145, .5); }
+    .reason .idx {
+      position: absolute;
+      top: 20px; right: 22px;
+      font-family: var(--round);
+      font-weight: 700;
+      font-size: 20px;
+      color: rgba(33, 79, 73, .14);
+      letter-spacing: .02em;
+    }
+    .reason .icon-badge { margin-bottom: 16px; }
+    .reason h3 { margin-bottom: 7px; font-size: 17px; }
+
+    .closing {
+      margin: 34px auto 0;
+      max-width: 28em;
+      text-align: center;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--teal-ink);
+    }
+    .closing .hl { background: linear-gradient(transparent 64%, rgba(217, 127, 71, .26) 0); padding: 0 .05em; }
+    .closing .hl,
+    .closing .nowrap {
+      word-break: keep-all;
+      overflow-wrap: normal;
+      white-space: nowrap;
+    }
+
+    .note {
+      margin: 24px auto 0;
+      max-width: 34em;
+      font-size: 12.5px;
+      color: var(--faint);
+      line-height: 1.85;
+      text-align: center;
+    }
+
+    /* ---------- flow ---------- */
+    .flow-list { display: grid; gap: 0; }
+    .step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 16px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 18px 20px;
+    }
+    .step-num {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-family: var(--head);
+    }
+    .step-num span { font-size: 8px; letter-spacing: .16em; opacity: .82; }
+    .step-num strong { font-size: 20px; font-weight: 700; line-height: 1; }
+    .step-body { display: flex; align-items: center; gap: 14px; }
+    .step-body .si { width: 26px; height: 26px; color: var(--teal-2); flex: 0 0 auto; }
+    .step h3 { font-size: 16px; color: var(--teal-ink); margin-bottom: 3px; }
+    .step p { margin: 0; font-size: 13.5px; color: var(--muted); }
+    .step-arrow {
+      width: 9px; height: 9px;
+      margin: 8px auto;
+      border-right: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      transform: rotate(45deg);
+    }
+
+    /* ---------- price ---------- */
+    .price-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+    .plan {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan.featured {
+      border: 2px solid var(--teal);
+      background: linear-gradient(180deg, rgba(46, 125, 116, .06), var(--card) 130px);
+      box-shadow: var(--shadow);
+    }
+    .plan.featured h3 { color: var(--teal); }
+    .plan-tag {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-width: 112px;
+      min-height: 34px;
+      padding: 6px 16px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #fff;
+      background: var(--teal);
+      border-radius: 7px;
+      white-space: nowrap;
+      box-shadow: 0 5px 12px rgba(46, 125, 116, .32);
+    }
+    .plan h3 { font-size: 21px; color: var(--teal-ink); text-align: center; }
+    .plan .for { margin: 6px 0 20px; padding-bottom: 18px; font-size: 12.5px; color: var(--muted); text-align: center; border-bottom: 1px solid var(--line-2); }
+    .price-rows { display: grid; gap: 0; margin-bottom: 20px; }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 0;
+    }
+    .price-row + .price-row { border-top: 1px solid var(--line-2); }
+    .price-row .pl { font-size: 12.5px; font-weight: 700; color: var(--teal-2); }
+    .price-row .pv { font-family: var(--head); font-weight: 700; font-size: 25px; color: var(--ink); text-align: right; line-height: 1.2; }
+    .price-row .pv small { font-size: 13px; font-weight: 500; }
+    .price-row .pv .sub { display: block; font-size: 12.5px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+    .plan ul { margin: 0 0 24px; padding: 0; list-style: none; display: grid; gap: 0; }
+    .plan li {
+      position: relative;
+      padding: 9px 0 9px 26px;
+      font-size: 13.5px;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line-2);
+      line-height: 1.6;
+    }
+    .plan li::before {
+      content: "";
+      position: absolute;
+      left: 3px; top: 13px;
+      width: 12px; height: 6px;
+      border-left: 2px solid var(--teal-2);
+      border-bottom: 2px solid var(--teal-2);
+      transform: rotate(-45deg);
+    }
+    .plan .btn { margin-top: auto; }
+    .price-note {
+      margin: 26px auto 0;
+      max-width: 32em;
+      padding: 0;
+      list-style: none;
+      font-size: 12.5px;
+      color: var(--faint);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .price-note li { margin: 5px 0; }
+
+    /* plan comparison table */
+    .compare-wrap { margin-top: 44px; }
+    .compare-card {
+      border: 1px solid rgba(33, 79, 73, .16);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(33, 45, 43, .08);
+      background: #fffdf8;
+    }
+    .compare { min-width: 0; }
+    .compare { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12.5px; }
+    .compare thead th {
+      background: var(--teal);
+      color: #fff;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 12px;
+      padding: 12px 4px;
+      text-align: center;
+      line-height: 1.35;
+      border-right: 1px solid rgba(255, 255, 255, .16);
+    }
+    .compare thead th:last-child { border-right: 0; }
+    .compare thead th:first-child { text-align: left; padding-left: 12px; background: var(--teal-ink); }
+    .compare col.c-ft { width: 32%; }
+    .compare col.c-rec { width: 28%; }
+    .compare thead th { white-space: nowrap; }
+
+    /* スタンダード列：控えめなおすすめ＋淡い背景（枠線なし） */
+    .compare thead th.rec {
+      padding-top: 7px;
+      padding-bottom: 9px;
+      line-height: 1.2;
+      background: linear-gradient(180deg, var(--orange), var(--orange-dark));
+    }
+    .rec-pill {
+      display: inline-block;
+      margin-bottom: 4px;
+      padding: 1px 8px;
+      background: rgba(255, 255, 255, .92);
+      color: var(--orange-dark);
+      font-family: var(--head);
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1.5;
+      border-radius: 999px;
+    }
+    .rec-name { display: block; }
+    .compare tbody th {
+      text-align: left;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--teal-ink);
+      padding: 11px 6px 11px 12px;
+      line-height: 1.4;
+      background: #fff7ea;
+      border-right: 1px solid rgba(33, 79, 73, .08);
+      border-bottom: 1px solid rgba(33, 79, 73, .09);
+    }
+    .compare tbody td {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--teal);
+      padding: 11px 4px;
+      background: #fffefa;
+      border-right: 1px solid rgba(33, 79, 73, .06);
+      border-bottom: 1px solid rgba(33, 79, 73, .09);
+      line-height: 1.4;
+    }
+    .compare tbody td:last-child { border-right: 0; }
+    .compare tbody tr:nth-child(even) th { background: #fff2de; }
+    .compare tbody tr:nth-child(even) td:not(.hl) { background: #f8fbfa; }
+    .compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+    .compare td.no { color: var(--faint); font-weight: 400; }
+    .compare td.txt { color: var(--ink); font-weight: 700; font-size: 11.5px; }
+    .compare .hl {
+      background: rgba(46, 125, 116, .105);
+      color: var(--teal-ink);
+      box-shadow: inset 1px 0 rgba(46, 125, 116, .12), inset -1px 0 rgba(46, 125, 116, .12);
+    }
+    .compare .hl.no { color: #8b9894; background: rgba(46, 125, 116, .06); }
+    .compare-legend {
+      margin: 12px auto 0;
+      max-width: 30em;
+      font-size: 11.5px;
+      color: var(--faint);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* billing toggle (month / year) */
+    .toggle-wrap { text-align: center; margin-bottom: 30px; }
+    .bill-toggle {
+      display: inline-flex;
+      gap: 4px;
+      padding: 5px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+    }
+    .bt {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 9px 20px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--muted);
+      background: none;
+      border-radius: 999px;
+      transition: background-color .16s ease, color .16s ease;
+    }
+    .bt.active { background: var(--teal); color: #fff; }
+    .bt-save {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: #fff;
+      letter-spacing: 0;
+    }
+    .price-row .amt { display: inline-block; }
+    .price-row .amt.yearly { display: none; }
+    #price.show-year .price-row .amt.monthly { display: none; }
+    #price.show-year .price-row .amt.yearly { display: inline-block; }
+    .price-row .save {
+      display: block;
+      margin-top: 4px;
+      text-align: right;
+      font-family: var(--head);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--orange-dark);
+    }
+
+    /* できること grid */
+    .can-do { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+    .can-title { text-align: center; font-size: 19px; color: var(--teal-ink); margin-bottom: 26px; }
+    .can-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    .can-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+    .can-ico {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(46, 125, 116, .09);
+      color: var(--teal);
+    }
+    .can-item:nth-child(even) .can-ico { background: rgba(224, 138, 83, .12); color: var(--orange-dark); }
+    .can-ico svg { width: 23px; height: 23px; }
+    .can-item span { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.5; }
+
+    /* ---------- works ---------- */
+    .works-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+    .work {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .work .thumb { position: relative; flex: 0 0 auto; }
+    .work .thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 1px rgba(33, 79, 73, .07);
+      background: linear-gradient(to top, rgba(22, 42, 40, .14), transparent 42%);
+      pointer-events: none;
+    }
+    .work.is-real { border-color: rgba(46, 125, 116, .4); box-shadow: var(--shadow); }
+    .work img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--bg-2); }
+    .work-label {
+      position: absolute;
+      top: 12px; left: 12px;
+      padding: 5px 12px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .06em;
+      line-break: strict;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      white-space: nowrap;
+      border-radius: 6px;
+      backdrop-filter: blur(2px);
+    }
+    .work-label.real { color: #fff; background: rgba(46, 125, 116, .95); }
+    .work-label.sample { color: var(--teal-ink); background: rgba(255, 255, 255, .92); border: 1px solid var(--line); }
+    .work-body { flex: 1 1 auto; min-height: 0; padding: 16px 18px 20px; }
+    .work h3 {
+      font-size: 16.5px;
+      color: var(--teal-ink);
+      margin-bottom: 5px;
+      line-break: strict;
+      word-break: normal;
+      word-break: auto-phrase;
+      overflow-wrap: normal;
+    }
+    .work p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+      line-break: strict;
+      word-break: normal;
+      word-break: auto-phrase;
+      overflow-wrap: break-word;
+    }
+    .work-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      margin-top: 12px;
+      padding: 0 14px;
+      border: 1px solid rgba(46, 125, 116, .18);
+      border-radius: 8px;
+      background: rgba(46, 125, 116, .08);
+      color: var(--teal-ink);
+      font-family: var(--head);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      line-break: strict;
+      word-break: keep-all;
+      overflow-wrap: normal;
+    }
+    .work-link:hover { background: rgba(46, 125, 116, .13); color: var(--teal-ink); }
+    .work-link:active { transform: translateY(1px); }
+
+    /* ---------- about ---------- */
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .about-card .portrait {
+      width: min(72%, 280px);
+      margin: 24px auto 0;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      background: var(--bg-2);
+    }
+    .about-body {
+      min-width: 0;
+      padding: 28px 26px 30px;
+    }
+    .about-name {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .about-name strong { font-family: var(--round); font-weight: 700; font-size: 21px; color: var(--teal-ink); letter-spacing: .04em; }
+    .about-name span { font-size: 12.5px; color: var(--muted); }
+    .about-body p {
+      margin: 0 0 14px;
+      max-width: none;
+      font-size: 14.5px;
+      line-height: 2;
+      color: var(--ink);
+      text-align: left;
+      line-break: strict;
+      word-break: normal;
+      word-break: auto-phrase;
+      overflow-wrap: normal;
+      text-wrap: pretty;
+    }
+    .about-body p:first-of-type {
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--teal-ink);
+      line-height: 1.85;
+      padding-left: 16px;
+      border-left: 3px solid var(--teal-2);
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+
+    /* ---------- faq ---------- */
+    .faq { max-width: 600px; margin: 0 auto; display: grid; gap: 10px; }
+    .faq details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: box-shadow .18s ease;
+    }
+    .faq details[open] { box-shadow: var(--shadow-sm); }
+    .faq summary {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 19px 20px;
+      cursor: pointer;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--teal-ink);
+      list-style: none;
+      transition: background-color .15s ease;
+    }
+    .faq summary:hover { background: rgba(46, 125, 116, .04); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .q {
+      flex: 0 0 auto;
+      width: 24px; height: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 6px;
+      background: var(--teal);
+      color: #fff;
+      font-family: var(--head);
+      font-size: 12px;
+    }
+    .faq summary .mark {
+      margin-left: auto;
+      flex: 0 0 auto;
+      width: 9px; height: 9px;
+      border-right: 2px solid var(--teal-2);
+      border-bottom: 2px solid var(--teal-2);
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+    .faq details[open] summary .mark { transform: rotate(225deg); }
+    .faq .answer {
+      padding: 0 22px 20px 58px;
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.95;
+    }
+
+    /* ---------- final cta ---------- */
+    .final { text-align: center; }
+    .final-card {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 44px 28px 40px;
+      background: var(--teal-ink);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      color: #fff;
+    }
+    .final-card h2 { font-size: 23px; color: #fff; margin-bottom: 14px; line-height: 1.55; }
+    .final-card p { margin: 0 auto 28px; max-width: 25em; font-size: 14.5px; color: rgba(255, 255, 255, .9); line-height: 1.95; }
+    .final-sub { margin-top: 18px; font-size: 12.5px; color: rgba(255, 255, 255, .72); }
+
+    /* ---------- footer ---------- */
+    .footer {
+      padding: 44px 0 50px;
+      text-align: center;
+      background: var(--bg-2);
+      border-top: 1px solid var(--line);
+    }
+    .footer .fname {
+      font-family: var(--round);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--teal-ink);
+      letter-spacing: .04em;
+      margin-bottom: 12px;
+    }
+    .footer p { margin: 5px 0; font-size: 12.5px; color: var(--muted); line-height: 1.85; }
+    .footer a { color: var(--teal-ink); text-decoration: underline; text-underline-offset: 2px; }
+    .footer-line {
+      margin: 20px auto 4px;
+      display: grid;
+      justify-items: center;
+      gap: 10px;
+    }
+    .footer-line p { margin: 0; }
+    .footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .footer .btn-line,
+    .footer .btn-line:visited {
+      color: #fff;
+      background: var(--line-green);
+      border-color: var(--line-green);
+      text-decoration: none;
+    }
+    .footer .btn-line:hover {
+      color: #fff;
+      background: var(--line-green-dark);
+      border-color: var(--line-green-dark);
+    }
+    .footer .footer-sample,
+    .footer .footer-sample:visited {
+      width: auto;
+      min-height: 50px;
+      padding: 0 26px;
+      color: #fff;
+      background: var(--orange);
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(217, 127, 71, .22);
+    }
+    .footer .footer-sample:hover {
+      color: #fff;
+      background: var(--orange-dark);
+    }
+    .footer .copy { margin-top: 18px; font-size: 11.5px; color: var(--faint); }
+
+    /* 特定商取引法に基づく表記（控えめ・開閉式） */
+    .legal { margin: 18px auto 2px; }
+    .legal > summary {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .legal > summary::-webkit-details-marker { display: none; }
+    .legal > summary::after { content: " ▾"; font-size: 10px; }
+    .legal[open] > summary::after { content: " ▴"; }
+    .legal-list {
+      max-width: 560px;
+      margin: 14px auto 0;
+      text-align: left;
+      border-top: 1px solid var(--line);
+    }
+    .legal-list > div {
+      display: grid;
+      grid-template-columns: 9.5em 1fr;
+      gap: 10px;
+      padding: 10px 4px;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .legal-list dt { margin: 0; font-size: 12px; font-weight: 700; color: var(--teal-ink); }
+    .legal-list dd { margin: 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+    .legal-note { margin: 12px auto 0; max-width: 560px; font-size: 11px; color: var(--faint); line-height: 1.7; }
+    @media (max-width: 480px) {
+      .legal-list > div { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    /* ---------- contact form ---------- */
+    .form-card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 26px 22px;
+    }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 700; color: var(--teal-ink); }
+    .req { margin-left: 5px; font-size: 11px; font-weight: 700; color: var(--orange-dark); }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      min-height: 48px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .field textarea { min-height: auto; line-height: 1.7; resize: vertical; }
+    .field input::placeholder, .field textarea::placeholder { color: #b3bab7; }
+    .field select {
+      -webkit-appearance: none;
+      appearance: none;
+      padding-right: 38px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232e7d74' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+    .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--teal-2); }
+    .field input:focus, .field select:focus, .field textarea:focus,
+    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(46, 125, 116, .15);
+    }
+    .form-submit { width: 100%; max-width: none; margin-top: 6px; }
+    .form-submit:disabled { opacity: .65; cursor: default; }
+    .form-mini { margin: 12px 0 0; text-align: center; font-size: 12px; color: var(--faint); }
+    .form-privacy { margin: 10px 0 0; text-align: center; font-size: 11.5px; line-height: 1.7; color: var(--faint); }
+    .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-intro {
+      margin: 0 0 20px;
+      padding: 13px 16px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--teal-ink);
+      background: rgba(46, 125, 116, .07);
+      border-radius: 10px;
+    }
+    .form-group-note {
+      margin: 24px 0 18px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted);
+      text-align: center;
+    }
+    .field-help {
+      margin: 8px 0 0;
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 1.75;
+      color: var(--teal-ink);
+      background: rgba(46, 125, 116, .06);
+      border-radius: 8px;
+    }
+    .contact-line-guide {
+      margin: -2px 0 18px;
+      padding: 14px 14px 16px;
+      color: var(--teal-ink);
+      background: rgba(6, 199, 85, .08);
+      border: 1px solid rgba(6, 199, 85, .22);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .contact-line-guide[hidden] { display: none; }
+    .contact-line-guide p {
+      margin: 0 0 12px;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+    .contact-line-guide .btn-line {
+      min-height: 46px;
+      padding-inline: 20px;
+      font-size: 14px;
+    }
+    .line-note { margin: 12px 0 0; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+    .field-label { display: block; margin-bottom: 9px; font-size: 14px; font-weight: 700; color: var(--teal-ink); }
+    .opt { margin-left: 5px; font-size: 11px; font-weight: 500; color: var(--faint); }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .choice span {
+      display: inline-flex; align-items: center;
+      min-height: 40px; padding: 8px 15px;
+      font-size: 13.5px; color: var(--ink);
+      background: #fff; border: 1px solid var(--line);
+      border-radius: 999px; cursor: pointer;
+      transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    }
+    .choice span:hover { border-color: var(--teal-2); }
+    .choice input:checked + span { background: rgba(46, 125, 116, .1); border-color: var(--teal); color: var(--teal-ink); font-weight: 700; }
+    .choice input:focus-visible + span { outline: 3px solid var(--teal-2); outline-offset: 2px; }
+
+    .form-details {
+      margin: 6px 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(46, 125, 116, .03);
+    }
+    .form-details > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 16px;
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--teal-ink);
+    }
+    .form-details > summary::-webkit-details-marker { display: none; }
+    .form-details > summary::after {
+      content: "";
+      margin-left: auto;
+      width: 9px; height: 9px;
+      border-right: 2px solid var(--teal-2);
+      border-bottom: 2px solid var(--teal-2);
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+    .form-details[open] > summary::after { transform: rotate(225deg); }
+    .form-details .details-inner { padding: 2px 16px 16px; }
+    .form-details .details-inner .field:last-child { margin-bottom: 0; }
+
+    .form-thanks { text-align: center; padding: 26px 14px 12px; }
+    .thanks-ico {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; margin-bottom: 14px;
+      border-radius: 50%; background: rgba(46, 125, 116, .1); color: var(--teal);
+    }
+    .thanks-ico svg { width: 30px; height: 30px; }
+    .form-thanks h3 { font-size: 19px; color: var(--teal-ink); margin-bottom: 10px; }
+    .form-thanks p { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.9; }
+
+    .line-cta { max-width: 560px; margin: 24px auto 0; text-align: center; }
+    .line-cta p { margin: 0 0 12px; font-size: 14px; color: var(--muted); }
+    .btn-line {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 50px; padding: 0 26px;
+      font-family: var(--head); font-weight: 700; font-size: 15px;
+      color: #fff; background: var(--line-green);
+      text-decoration: none;
+      border: 1.5px solid var(--line-green); border-radius: 10px;
+      transition: background-color .18s ease, border-color .18s ease, transform .12s ease;
+    }
+    .btn-line:hover { background: var(--line-green-dark); border-color: var(--line-green-dark); color: #fff; }
+    .btn-line:active { transform: translateY(1px); }
+    .btn-line svg { width: 18px; height: 18px; color: currentColor; }
+
+    /* ---------- responsive (desktop) ---------- */
+    @media (min-width: 700px) {
+      .section { padding: 92px 0; }
+      .sec-title { font-size: 31px; margin-bottom: 18px; }
+      .sec-lead { margin-bottom: 48px; }
+      .hero { padding: 64px 0 80px; }
+      .hero-top { display: grid; grid-template-columns: 1.12fr .88fr; gap: 44px; align-items: center; }
+      .hero-visual { margin-top: 0; }
+      .hero-visual .frame { max-width: 430px; }
+      .hero-visual img { aspect-ratio: 5 / 4; object-position: 60% 50%; }
+      .hero h1 { font-size: 31px; }
+      .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+      .nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2px;
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+      }
+      .nav a { padding: 8px 10px; font-size: 13.5px; }
+      .nav .nav-line,
+      .nav .nav-cta { margin: 0 0 0 8px; padding: 9px 14px; border-radius: 8px; }
+      .hamburger { display: none; }
+      .price-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; margin-top: 10px; }
+      .plan.featured { transform: scale(1.035); z-index: 2; }
+      .can-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .can-item:nth-child(even) .can-ico { background: rgba(46, 125, 116, .09); color: var(--teal); }
+      .can-item:nth-child(3n+2) .can-ico { background: rgba(224, 138, 83, .12); color: var(--orange-dark); }
+      .compare { font-size: 14px; }
+      .compare thead th, .compare tbody th { font-size: 13px; }
+      .compare tbody td { font-size: 14.5px; }
+      .compare thead th, .compare tbody th, .compare tbody td { padding-top: 13px; padding-bottom: 13px; }
+      .works-grid { grid-template-columns: repeat(3, 1fr); }
+      .about-card {
+        display: grid;
+        grid-template-columns: minmax(160px, 190px) minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+        padding: 30px 32px;
+      }
+      .about-card .portrait {
+        align-self: start;
+        justify-self: start;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center top;
+        margin: 0;
+      }
+      .about-body { padding: 0; }
+    }
+
+    @media (max-width: 480px) {
+      .about-body { padding: 24px 22px 28px; }
+      .sec-title {
+        font-size: clamp(22px, 6.2vw, 26px);
+        line-height: 1.55;
+        letter-spacing: 0;
+      }
+      .hero h1 {
+        font-size: clamp(26px, 7.8vw, 30px);
+        letter-spacing: 0;
+      }
+      .btn {
+        padding-inline: 22px;
+        letter-spacing: 0;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .wrap { padding: 0 18px; }
+      .hero h1 { font-size: 26px; }
+      .sec-title { font-size: 22px; }
+      .step { grid-template-columns: 50px 1fr; gap: 12px; }
+      .step-body { gap: 10px; }
+      .can-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#top">合同会社4U</a>
+      <nav class="nav" id="nav" aria-label="メニュー">
+        <a href="#price">料金プラン</a>
+        <a href="#works">制作実績</a>
+        <a href="#faq">よくある質問</a>
+        <a href="https://lin.ee/o3CtE1s" class="nav-line" target="_blank" rel="noopener">LINEで相談</a>
+        <a href="#contact" class="nav-cta">無料サンプル</a>
+      </nav>
+      <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. ファーストビュー -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-top">
+          <div class="hero-lead">
+            <span class="hero-eyebrow">群馬・沼田の小さなお店向け｜ホームページ制作</span>
+            <h1>小さなお店に、<br><span class="accent">ちゃんと伝わる</span><br>ホームページを。</h1>
+            <p class="hero-sub">地元・沼田で、ホームページのことは<span class="nowrap">ぜんぶおまかせ。</span><br>まずは無料サンプルから。<span class="nowrap">気に入らなければ、</span>お断りいただいて<span class="nowrap">大丈夫です。</span></p>
+            <ul class="badges">
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>制作実績あり</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>群馬・沼田</li>
+              <li><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z"/></svg>オンライン全国対応</li>
+            </ul>
+            <div class="btn-center" style="justify-content:flex-start;">
+              <a class="btn primary" href="#contact">無料サンプルを申し込む<span class="arrow"></span></a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="frame">
+              <img src="assets/hero-shop-local-v1.png" alt="小さなお店の前でスマートフォンのホームページを確認しているイメージ">
+            </div>
+            <p class="caption">※ イメージ写真</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. お悩み共感 -->
+    <section class="section alt">
+      <div class="wrap">
+        <span class="eyebrow">WORRIES</span>
+        <h2 class="sec-title">こんなお悩み、ありませんか？</h2>
+        <div class="grid cols-2">
+          <article class="card worry">
+            <div class="whead">
+              <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r="1"/></svg></span>
+              <h3>Instagramだけで案内している</h3>
+            </div>
+            <p>ホームページがなく、お店の魅力をまとめて見せられない。</p>
+          </article>
+          <article class="card worry">
+            <div class="whead">
+              <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span>
+              <h3>スマホから見づらい</h3>
+            </div>
+            <p>古いホームページのままで、今のスマホに合っていない。</p>
+          </article>
+          <article class="card worry">
+            <div class="whead">
+              <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></span>
+              <h3>料金・メニューが伝わらない</h3>
+            </div>
+            <p>料金やメニューを、分かりやすく載せられていない。</p>
+          </article>
+          <article class="card worry">
+            <div class="whead">
+              <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+              <h3>予約・問い合わせにつながらない</h3>
+            </div>
+            <p>見てもらえても、問い合わせや予約への導線がない。</p>
+          </article>
+        </div>
+        <p class="closing">こうしたお悩みは、無料サンプルで<span class="hl">「<span class="nowrap">見た目</span>」と「<span class="nowrap">伝わり方</span>」</span>をまず確かめられます。</p>
+      </div>
+    </section>
+
+    <!-- 3. 無料サンプル作成の流れ -->
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow">FLOW</span>
+        <h2 class="sec-title">ご相談から本制作までの流れ</h2>
+        <p class="sec-lead">特別な準備はいりません。見てから、ゆっくり決められます。</p>
+        <div class="flow-list">
+          <article class="step">
+            <div class="step-num"><span>STEP</span><strong>1</strong></div>
+            <div class="step-body">
+              <svg class="icon si" viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4M8 13h8M8 16.5h5"/></svg>
+              <div><h3>簡単な質問に答える</h3><p>お店のことを、いくつか答えるだけ。</p></div>
+            </div>
+          </article>
+          <div class="step-arrow" aria-hidden="true"></div>
+          <article class="step">
+            <div class="step-num"><span>STEP</span><strong>2</strong></div>
+            <div class="step-body">
+              <svg class="icon si" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M4 9h16M7 13h7M7 16h5"/></svg>
+              <div><h3>無料サンプルを作成</h3><p>お店に合わせて、こちらで作ります。</p></div>
+            </div>
+          </article>
+          <div class="step-arrow" aria-hidden="true"></div>
+          <article class="step">
+            <div class="step-num"><span>STEP</span><strong>3</strong></div>
+            <div class="step-body">
+              <svg class="icon si" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+              <div><h3>サンプルを確認</h3><p>お申し込みから2〜3日ほどで、できあがりをご覧いただきます。</p></div>
+            </div>
+          </article>
+          <div class="step-arrow" aria-hidden="true"></div>
+          <article class="step">
+            <div class="step-num"><span>STEP</span><strong>4</strong></div>
+            <div class="step-body">
+              <svg class="icon si" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <div><h3>気に入ったら本制作へ</h3><p>気に入らなければ、ここで終わりで大丈夫です。</p></div>
+            </div>
+          </article>
+        </div>
+        <p class="note">サンプル作成まで無料です。途中でやめても費用はかかりません。</p>
+        <div class="btn-center" style="margin-top:28px;">
+          <a class="btn primary" href="#contact">無料サンプルを申し込む<span class="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 選ばれる理由 -->
+    <section class="section alt">
+      <div class="wrap">
+        <span class="eyebrow">REASONS</span>
+        <h2 class="sec-title">4Uが選ばれる3つの理由</h2>
+        <div class="grid cols-3">
+          <article class="card reason">
+            <span class="idx">01</span>
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.6"/></svg></span>
+            <h3>見てから決められる</h3>
+            <p>無料サンプルで、先にイメージを確認できます。</p>
+          </article>
+          <article class="card reason">
+            <span class="idx">02</span>
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M4 13 11 6h7v7l-7 7z"/><circle cx="14.5" cy="9.5" r="1.3"/></svg></span>
+            <h3>分かりやすい料金</h3>
+            <p>制作費と月々の管理費を、はっきりご案内します。</p>
+          </article>
+          <article class="card reason">
+            <span class="idx">03</span>
+            <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/><path d="m9 11.5 2 2 4-4"/></svg></span>
+            <h3>地元の制作者に、LINEで気軽に</h3>
+            <p>顔の見える地元の相手だから安心。公開後の修正も、LINEで気軽にご相談いただけます。</p>
+          </article>
+        </div>
+        <p class="note">群馬・沼田を中心に、全国どこでもオンラインで対応します。</p>
+      </div>
+    </section>
+
+    <!-- 5. 料金プラン -->
+    <section class="section" id="price">
+      <div class="wrap">
+        <span class="eyebrow">PRICE</span>
+        <h2 class="sec-title">料金プラン</h2>
+        <p class="sec-lead">お店の目的に合わせて、3つから選べます。（金額は目安です）</p>
+        <div class="toggle-wrap">
+          <div class="bill-toggle" role="group" aria-label="管理費の表示を月額と年額で切り替え">
+            <button type="button" class="bt active" data-mode="monthly" aria-pressed="true">月額</button>
+            <button type="button" class="bt" data-mode="yearly" aria-pressed="false">年額<span class="bt-save">2か月分おトク</span></button>
+          </div>
+        </div>
+        <div class="price-grid">
+          <article class="plan">
+            <h3>ライト</h3>
+            <p class="for">まずは知ってもらいたい方に</p>
+            <div class="price-rows">
+              <div class="price-row"><span class="pl">制作費</span><span class="pv">30,000<small>円</small><span class="sub">（最初に1回）</span></span></div>
+              <div class="price-row"><span class="pl">管理費</span><span class="pv"><span class="amt monthly">月 5,500<small>円</small><span class="sub">（毎月）</span></span><span class="amt yearly">年 55,000<small>円</small><span class="save">（2か月分おトク）</span></span></span></div>
+            </div>
+            <ul>
+              <li>お店紹介・メニュー・料金の掲載</li>
+              <li>スマホ対応</li>
+              <li>更新 年2回まで</li>
+            </ul>
+            <a class="btn primary" href="#contact">無料サンプルを申し込む</a>
+          </article>
+
+          <article class="plan featured">
+            <span class="plan-tag">おすすめ</span>
+            <h3>スタンダード</h3>
+            <p class="for">問い合わせや予約につなげたい方に</p>
+            <div class="price-rows">
+              <div class="price-row"><span class="pl">制作費</span><span class="pv">40,000<small>円</small><span class="sub">（最初に1回）</span></span></div>
+              <div class="price-row"><span class="pl">管理費</span><span class="pv"><span class="amt monthly">月 6,500<small>円</small><span class="sub">（毎月）</span></span><span class="amt yearly">年 65,000<small>円</small><span class="save">（2か月分おトク）</span></span></span></div>
+            </div>
+            <ul>
+              <li>ライトの内容すべて</li>
+              <li>問い合わせ受付（LINE・フォーム）</li>
+              <li>地図連携</li>
+              <li>更新 月1回まで</li>
+            </ul>
+            <a class="btn primary" href="#contact">無料サンプルを申し込む</a>
+          </article>
+
+          <article class="plan">
+            <h3>プレミアム</h3>
+            <p class="for">集客まで力を入れたい方に</p>
+            <div class="price-rows">
+              <div class="price-row"><span class="pl">制作費</span><span class="pv">60,000<small>円</small><span class="sub">（最初に1回）</span></span></div>
+              <div class="price-row"><span class="pl">管理費</span><span class="pv"><span class="amt monthly">月 9,800<small>円</small><span class="sub">（毎月）</span></span><span class="amt yearly">年 98,000<small>円</small><span class="save">（2か月分おトク）</span></span></span></div>
+            </div>
+            <ul>
+              <li>スタンダードの内容すべて</li>
+              <li>ネット予約は応相談</li>
+              <li>写真撮影サポート</li>
+              <li>簡単レポート（どのくらい見られたかが分かる、かんたんな報告）</li>
+            </ul>
+            <a class="btn primary" href="#contact">無料サンプルを申し込む</a>
+          </article>
+        </div>
+        <div class="compare-wrap">
+          <h3 class="can-title">プランをくらべる</h3>
+          <div class="compare-card">
+            <table class="compare">
+              <colgroup>
+                <col class="c-ft"><col><col class="c-rec"><col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">機能</th>
+                  <th scope="col">ライト</th>
+                  <th scope="col" class="rec"><span class="rec-pill">おすすめ</span><span class="rec-name">スタンダード</span></th>
+                  <th scope="col">プレミアム</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">お店紹介・メニュー掲載</th><td>○</td><td class="hl">○</td><td>○</td></tr>
+                <tr><th scope="row">スマホ対応</th><td>○</td><td class="hl">○</td><td>○</td></tr>
+                <tr><th scope="row">検索・AIの基本対策</th><td>○</td><td class="hl">○</td><td>○</td></tr>
+                <tr><th scope="row">更新サポート</th><td class="txt">年2回</td><td class="hl txt">月1回</td><td class="txt">月1回</td></tr>
+                <tr><th scope="row">問い合わせ受付</th><td class="no">—</td><td class="hl">○</td><td>○</td></tr>
+                <tr><th scope="row">地図連携</th><td class="no">—</td><td class="hl">○</td><td>○</td></tr>
+                <tr><th scope="row">ネット予約</th><td class="no">—</td><td class="hl no">—</td><td class="txt">応相談</td></tr>
+                <tr><th scope="row">写真撮影サポート</th><td class="no">—</td><td class="hl no">—</td><td>○</td></tr>
+                <tr><th scope="row">簡単レポート</th><td class="no">—</td><td class="hl no">—</td><td>○</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="compare-legend">○：対応／—：なし／応相談：内容に応じてご相談します。</p>
+        </div>
+
+        <ul class="price-note">
+          <li>※ 年額なら、2か月分おトク。</li>
+          <li>※ サーバー（ホームページを置く場所）・ドメイン（ホームページの住所）などの実費は別途いただきます。</li>
+          <li>※ 金額は目安です。詳しくは無料サンプルで。</li>
+        </ul>
+
+        <div class="can-do" id="features">
+          <h3 class="can-title">ホームページでできること</h3>
+          <div class="can-grid">
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span>
+              <span>スマホ対応</span>
+            </div>
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></span>
+              <span>メニュー掲載</span>
+            </div>
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+              <span>問い合わせ受付</span>
+            </div>
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+              <span>地図連携</span>
+            </div>
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+              <span>検索・AIの基本対策</span>
+            </div>
+            <div class="can-item">
+              <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg></span>
+              <span>公開後の更新</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 実績・デザイン見本 -->
+    <section class="section alt">
+      <div class="wrap" id="works">
+        <span class="eyebrow">WORKS</span>
+        <h2 class="sec-title">制作実績・デザイン見本</h2>
+        <p class="sec-lead">実際の実績と、お店ごとのデザイン例をご紹介します。</p>
+        <div class="works-grid">
+          <article class="work is-real">
+            <div class="thumb">
+              <img src="assets/work-juku.png" alt="個別指導塾 free のホームページ">
+              <span class="work-label real">制作実績</span>
+            </div>
+            <div class="work-body">
+              <h3>個別指導塾 free（沼田市）</h3>
+              <p>実際に制作し、運営中のホームページです。</p>
+              <a class="work-link" href="https://4u-studio.github.io/juku-free/" target="_blank" rel="noopener">実際のサイトを見る</a>
+            </div>
+          </article>
+          <article class="work">
+            <div class="thumb">
+              <img src="assets/work-salon.png" alt="美容室・サロン向けのデザイン見本">
+              <span class="work-label sample">架空サンプル</span>
+            </div>
+            <div class="work-body">
+              <h3>美容室・サロン</h3>
+              <p>公開前の<span class="nowrap">架空サンプル</span>です。実在する店舗様の事例ではありません。</p>
+            </div>
+          </article>
+          <article class="work">
+            <div class="thumb">
+              <img src="assets/work-restaurant.png" alt="飲食店向けのデザイン見本">
+              <span class="work-label sample">デザイン見本</span>
+            </div>
+            <div class="work-body">
+              <h3>飲食店</h3>
+              <p>メニューや雰囲気が伝わる例（サンプル）。</p>
+            </div>
+          </article>
+        </div>
+        <p class="note">「架空サンプル」「デザイン見本」は、実在する店舗様の事例ではなく、イメージ用に作成したものです。</p>
+      </div>
+    </section>
+
+    <!-- 7. 運営者の自己紹介 -->
+    <section class="section about-section">
+      <div class="wrap">
+        <span class="eyebrow">ABOUT</span>
+        <h2 class="sec-title">「最初の一歩」を、いっしょに。</h2>
+        <div class="about-card">
+          <img class="portrait" src="assets/about-portrait.png" alt="合同会社4U 代表 土屋裕二の写真">
+          <div class="about-body">
+            <div class="about-name">
+              <strong>土屋 裕二</strong>
+              <span>合同会社4U 代表社員</span>
+            </div>
+            <p>沼田には、いいお店がたくさんあります。</p>
+            <p>ただ、その案内がInstagramだけになっていることも多く、手軽な反面、情報がまとまっていなくて、お店の全体像が伝わりにくい。せっかくの良さが知られていないのを、私はずっと「もったいない」と感じてきました。</p>
+            <p>2023年9月、私は沼田市で個別指導塾 free を開きました。当時はホームページの知識も、かけられる費用も、作る力もなく、ずいぶん困ったのを覚えています。でも今は、AI（人工知能）という便利な道具を上手に使えば、費用を抑えてホームページを作れる時代になりました。だからこそ、その方法を、同じ沼田のお店にお届けしたいと思っています。</p>
+            <p>もちろん、ただ機械にまかせるのではなく、一軒ずつ、お店に合わせてていねいに仕上げます。大切なのは、お店の良さが「ちゃんと伝わる」こと。同じ沼田で店を営む一人として、その手伝いをさせてください。まずは無料サンプルから。気に入らなければ、お断りいただいて大丈夫です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="section alt">
+      <div class="wrap" id="faq">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="sec-title">よくあるご質問</h2>
+        <div class="faq">
+          <details>
+            <summary><span class="q">Q</span>専門知識がなくても大丈夫？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">はい。質問に答えるだけで大丈夫です。むずかしい言葉は使いません。</p>
+          </details>
+          <details>
+            <summary><span class="q">Q</span>パソコンが苦手でも大丈夫？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">はい。やり取りはLINEやお電話でかまいませんし、公開した後の更新も、こちらで承ります。むずかしい操作は必要ありません。</p>
+          </details>
+          <details>
+            <summary><span class="q">Q</span>最初にいくらかかる？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">制作費は3万円〜が目安です。サンプル作成までは無料です。</p>
+          </details>
+          <details>
+            <summary><span class="q">Q</span>途中で断れる？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">はい。サンプルを見て、気に入らなければ終わりで大丈夫です。費用はかかりません。</p>
+          </details>
+          <details>
+            <summary><span class="q">Q</span>遠方でも対応できる？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">はい。オンラインで全国に対応しています。</p>
+          </details>
+          <details>
+            <summary><span class="q">Q</span>公開後の修正も頼める？<span class="mark" aria-hidden="true"></span></summary>
+            <p class="answer">はい。管理費の範囲で更新できます。内容によってはご相談も可能です。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 無料サンプル申し込みフォーム -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <span class="eyebrow">CONTACT</span>
+        <h2 class="sec-title">ホームページの無料サンプルを申し込む</h2>
+        <p class="sec-lead">かんたんな質問にお答えください。内容をもとに、2〜3日以内に無料サンプルを作成し、確認用リンク（数日間の限定公開）をお送りします。気に入ったら本制作へ。気に入らなければ、お断りいただいて大丈夫です。</p>
+
+        <div class="form-card">
+          <p class="form-intro">分かる範囲だけで大丈夫です。InstagramやGoogleマップ、今のホームページがあれば、こちらで内容を確認しながら、無料サンプルをお作りします。</p>
+          <!-- 送信先のApps ScriptのURLは、下の <script> 内 SAMPLE_FORM_ENDPOINT を本番URLに差し替えてください -->
+          <form id="sampleForm" novalidate>
+            <!-- 自動送信（スパム）対策の見えない欄。通常の方には表示されません -->
+            <div class="hp-field" aria-hidden="true">
+              <label>このらんは入力しないでください
+                <input type="text" name="website" tabindex="-1" autocomplete="off">
+              </label>
+            </div>
+            <div class="field">
+              <label for="f-name">お名前 <span class="req">★必須</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <p class="field-label">ご希望の連絡方法 <span class="req">★必須</span></p>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="contact_method" value="電話" required><span>電話</span></label>
+                <label class="choice"><input type="radio" name="contact_method" value="メール" required><span>メール</span></label>
+                <label class="choice"><input type="radio" name="contact_method" value="LINE" required><span>LINE</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-tel">電話番号 <span id="tel-required-label" class="opt">任意</span></label>
+              <input id="f-tel" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-email">メールアドレス <span id="email-required-label" class="opt">任意</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" placeholder="例：sample@example.com">
+            </div>
+            <div class="contact-line-guide" id="lineContactGuide" hidden>
+              <p>LINEをご希望の場合は、公式LINEを友だち追加して、一言お送りください。念のため、メールアドレスか電話番号のどちらかもご入力ください。</p>
+              <a class="btn-line" href="https://lin.ee/o3CtE1s" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M9 9.5h6M9 12.5h4"/></svg>
+                公式LINEを友だち追加する
+              </a>
+            </div>
+
+            <p class="form-group-note">ここから下は任意です。<br>詳しく書くほど、ご希望に近い無料サンプルをお作りできます。</p>
+
+            <div class="field">
+              <label for="f-shop">店名・屋号 <span class="opt">任意</span></label>
+              <input id="f-shop" name="shop" type="text">
+            </div>
+            <div class="field">
+              <p class="field-label">業種 <span class="opt">任意</span></p>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="industry" value="飲食店"><span>飲食店</span></label>
+                <label class="choice"><input type="radio" name="industry" value="美容室・サロン"><span>美容室・サロン</span></label>
+                <label class="choice"><input type="radio" name="industry" value="教室・スクール"><span>教室・スクール</span></label>
+                <label class="choice"><input type="radio" name="industry" value="小売店"><span>小売店</span></label>
+                <label class="choice"><input type="radio" name="industry" value="士業・相談業"><span>士業・相談業</span></label>
+                <label class="choice"><input type="radio" name="industry" value="建設・職人・親方業"><span>建設・職人・親方業</span></label>
+                <label class="choice"><input type="radio" name="industry" value="整体・治療院"><span>整体・治療院</span></label>
+                <label class="choice"><input type="radio" name="industry" value="福祉・介護"><span>福祉・介護</span></label>
+                <label class="choice"><input type="radio" name="industry" value="地域サービス"><span>地域サービス</span></label>
+                <label class="choice"><input type="radio" name="industry" value="その他"><span>その他</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <p class="field-label">作りたいホームページの目的 <span class="opt">任意・複数選べます</span></p>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="purpose" value="お店紹介"><span>お店紹介</span></label>
+                <label class="choice"><input type="checkbox" name="purpose" value="メニュー掲載"><span>メニュー掲載</span></label>
+                <label class="choice"><input type="checkbox" name="purpose" value="問い合わせを増やしたい"><span>問い合わせを増やしたい</span></label>
+                <label class="choice"><input type="checkbox" name="purpose" value="予約につなげたい"><span>予約につなげたい</span></label>
+                <label class="choice"><input type="checkbox" name="purpose" value="採用"><span>採用</span></label>
+                <label class="choice"><input type="checkbox" name="purpose" value="まだ決まっていない"><span>まだ決まっていない</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-target">どんなお客様に見てもらいたいですか？ <span class="opt">任意</span></label>
+              <textarea id="f-target" name="target" rows="2" placeholder="例：近くに住む主婦の方、子育て世代、初めて来店する方、法人のお客様、年配の方、若い女性 など"></textarea>
+            </div>
+            <div class="field">
+              <p class="field-label">希望の雰囲気 <span class="opt">任意・複数選べます</span></p>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="atmosphere" value="やさしい"><span>やさしい</span></label>
+                <label class="choice"><input type="checkbox" name="atmosphere" value="上品"><span>上品</span></label>
+                <label class="choice"><input type="checkbox" name="atmosphere" value="シンプル"><span>シンプル</span></label>
+                <label class="choice"><input type="checkbox" name="atmosphere" value="親しみやすい"><span>親しみやすい</span></label>
+                <label class="choice"><input type="checkbox" name="atmosphere" value="高級感"><span>高級感</span></label>
+                <label class="choice"><input type="checkbox" name="atmosphere" value="おまかせ"><span>おまかせ</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <p class="field-label">ホームページでやりたいこと <span class="opt">任意・複数選べます</span></p>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="features" value="ホームページから問い合わせを受けたい"><span>ホームページから問い合わせを受けたい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="LINEで相談・予約を受けたい"><span>LINEで相談・予約を受けたい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="お店の場所を分かりやすく載せたい"><span>お店の場所を分かりやすく載せたい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="Instagramも見てもらいたい"><span>Instagramも見てもらいたい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="予約ページへ案内したい"><span>予約ページへ案内したい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="メニューや料金を載せたい"><span>メニューや料金を載せたい</span></label>
+                <label class="choice"><input type="checkbox" name="features" value="最新のお知らせを載せたい"><span>最新のお知らせを載せたい</span></label>
+              </div>
+            </div>
+
+            <details class="form-details">
+              <summary>お店の情報をくわしく入力する（任意）</summary>
+              <div class="details-inner">
+                <div class="field">
+                  <label for="f-sns">Instagram・現在のホームページのURL <span class="opt">任意</span></label>
+                  <input id="f-sns" name="sns_url" type="text" placeholder="あれば貼り付けてください">
+                </div>
+                <div class="field">
+                  <label for="f-map">GoogleマップのURL <span class="opt">任意</span></label>
+                  <input id="f-map" name="map_url" type="text" placeholder="あれば貼り付けてください">
+                </div>
+                <div class="field">
+                  <label for="f-shoptel">ホームページに載せたい電話番号 <span class="opt">任意</span></label>
+                  <input id="f-shoptel" name="show_tel" type="tel" inputmode="tel">
+                </div>
+                <div class="field">
+                  <label for="f-line">ホームページに載せたい公式LINE <span class="opt">任意</span></label>
+                  <input id="f-line" name="show_line" type="text" placeholder="LINEのIDやURL">
+                </div>
+                <div class="field">
+                  <label for="f-address">お店の住所 <span class="opt">任意</span></label>
+                  <input id="f-address" name="address" type="text">
+                </div>
+                <div class="field">
+                  <label for="f-hours">営業時間 <span class="opt">任意</span></label>
+                  <input id="f-hours" name="hours" type="text" placeholder="例：10:00〜19:00">
+                </div>
+                <div class="field">
+                  <label for="f-holiday">定休日 <span class="opt">任意</span></label>
+                  <input id="f-holiday" name="holiday" type="text" placeholder="例：水曜日">
+                </div>
+                <div class="field">
+                  <label for="f-menu">載せたいメニューや料金 <span class="opt">任意</span></label>
+                  <textarea id="f-menu" name="menu" rows="3" placeholder="分かる範囲で大丈夫です。"></textarea>
+                  <p class="field-help">メニュー表・料金表・営業時間が分かるものは、写真で送っていただいても大丈夫です。公式LINEを友だち追加いただければ、写真をそのままLINEでお送りいただけます。</p>
+                </div>
+              </div>
+            </details>
+
+            <div class="field">
+              <label for="f-other">その他のご要望 <span class="opt">任意</span></label>
+              <textarea id="f-other" name="other" rows="3" placeholder="気になることがあれば、自由にお書きください。"></textarea>
+            </div>
+
+            <button type="submit" class="btn primary form-submit">無料サンプルを申し込む</button>
+            <p class="form-mini">必須は「お名前」と、連絡先（メールまたは電話）です。LINEをご希望の場合は、公式LINEの友だち追加もお願いします。</p>
+            <p class="form-privacy">いただいた情報は、無料サンプルの作成とご連絡のみに使用します。</p>
+          </form>
+
+          <div class="form-thanks" id="formThanks" hidden>
+            <span class="thanks-ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg></span>
+            <h3>ありがとうございます。</h3>
+            <p>内容を確認し、2〜3日以内に無料サンプルの確認リンクをお送りします。</p>
+          </div>
+        </div>
+
+        <div class="line-cta">
+          <p>「まずは相談だけ」も大歓迎です。<br>上のフォームの「その他のご要望」に、ひとことお書きください。</p>
+          <!-- フォーム下にもLINEボタンを表示したい場合は、このコメント記号を外してください。
+          <a class="btn-line" href="https://lin.ee/o3CtE1s" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M9 9.5h6M9 12.5h4"/></svg>
+            公式LINEで相談する
+          </a>
+          -->
+          <p class="line-note">メニュー表・料金表・写真などは、お申し込み後のご連絡で、写真のままお送りいただけます。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="fname">合同会社4U（フォーユー）</p>
+      <p>群馬県沼田市を拠点／オンラインで全国対応</p>
+      <!-- ▼ 公開用メールが決まったら、この行を「お問い合わせ：<a href="mailto:（アドレス）">（アドレス）</a>」に差し替えできます -->
+      <p>お問い合わせは <a href="#contact">申し込みフォーム</a> から承ります</p>
+      <div class="footer-line">
+        <p>ホームページのこと、お気軽にご相談ください。</p>
+        <div class="footer-actions">
+          <a class="btn-line" href="https://lin.ee/o3CtE1s" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M9 9.5h6M9 12.5h4"/></svg>
+            LINEで相談
+          </a>
+          <a class="btn primary footer-sample" href="#contact">無料サンプルを申し込む</a>
+        </div>
+      </div>
+
+      <details class="legal">
+        <summary>特定商取引法に基づく表記</summary>
+        <dl class="legal-list">
+          <div><dt>事業者名</dt><dd>合同会社4U</dd></div>
+          <div><dt>運営責任者</dt><dd>土屋 裕二</dd></div>
+          <div><dt>所在地</dt><dd>群馬県沼田市（詳しい住所は、お申し込み前にご確認いただけます）</dd></div>
+          <div><dt>お問い合わせ</dt><dd>本ページの「申し込みフォーム」から承ります</dd></div>
+          <div><dt>販売価格</dt><dd>本ページの「料金プラン」に記載しています</dd></div>
+          <div><dt>料金以外の費用</dt><dd>ドメイン代・サーバー代など。必要な場合は事前にご案内します</dd></div>
+          <div><dt>お支払い方法・時期</dt><dd>個別にご案内します</dd></div>
+          <div><dt>サービスの提供時期</dt><dd>内容を確認のうえ、個別にご案内します</dd></div>
+          <div><dt>キャンセル・返金</dt><dd>制作開始の前後で取り扱いが変わるため、事前にご案内します</dd></div>
+        </dl>
+        <p class="legal-note">※ 記載のない事項や詳細は、お申し込み前に個別にご案内します。</p>
+      </details>
+
+      <p class="copy">© 2026 合同会社4U</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var sec = document.getElementById('price');
+      if (!sec) return;
+      var btns = sec.querySelectorAll('.bt');
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          btns.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+          b.classList.add('active');
+          b.setAttribute('aria-pressed', 'true');
+          sec.classList.toggle('show-year', b.dataset.mode === 'yearly');
+        });
+      });
+    })();
+
+    /* ハンバーガーメニュー・現在地の強調・申し込みフォーム送信 */
+    (function () {
+      var ham = document.getElementById('hamburger');
+      var nav = document.getElementById('nav');
+      if (ham && nav) {
+        ham.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          ham.setAttribute('aria-expanded', open ? 'true' : 'false');
+          ham.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+        });
+        nav.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('open');
+            ham.setAttribute('aria-expanded', 'false');
+            ham.setAttribute('aria-label', 'メニューを開く');
+          });
+        });
+      }
+
+      var ids = ['price', 'works', 'faq', 'contact'];
+      var links = {};
+      ids.forEach(function (id) { var l = document.querySelector('.nav a[href="#' + id + '"]'); if (l) links[id] = l; });
+      var secs = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      secs.sort(function (a, b) { return a.offsetTop - b.offsetTop; });
+      function spy() {
+        var pos = window.scrollY + 100, cur = null;
+        secs.forEach(function (s) { if (s.offsetTop <= pos) cur = s.id; });
+        Object.keys(links).forEach(function (id) { links[id].classList.toggle('active', id === cur); });
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(function () { spy(); ticking = false; }); }
+      }, { passive: true });
+      window.addEventListener('load', spy);
+      spy();
+
+      // ▼ 本番のApps Script URLに差し替えてください（ここ1か所だけ）
+      var SAMPLE_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyfoGlSZhbdDg7VxTU7qZvWLTfJsaukSb5-ps393ezPa7SZJzjiKaClMb0cFvf6f98/exec";
+      var form = document.getElementById('sampleForm');
+      if (form) {
+        var methodChoices = form.querySelectorAll('input[name="contact_method"]');
+        var tel = document.getElementById('f-tel');
+        var email = document.getElementById('f-email');
+        var telLabel = document.getElementById('tel-required-label');
+        var emailLabel = document.getElementById('email-required-label');
+        var lineGuide = document.getElementById('lineContactGuide');
+
+        function setContactRequired(input, label, required, labelText) {
+          if (!input || !label) return;
+          input.required = required;
+          label.className = required || labelText ? 'req' : 'opt';
+          label.textContent = labelText || (required ? '★必須' : '任意');
+        }
+
+        function getContactMethod() {
+          var selected = form.querySelector('input[name="contact_method"]:checked');
+          return selected ? selected.value : '';
+        }
+
+        function updateContactRequired() {
+          var selected = getContactMethod();
+          var isLine = selected === 'LINE';
+          setContactRequired(tel, telLabel, selected === '電話', isLine ? 'どちらか必須' : '');
+          setContactRequired(email, emailLabel, selected === 'メール', isLine ? 'どちらか必須' : '');
+          if (lineGuide) lineGuide.hidden = !isLine;
+          validateLineContact(false);
+        }
+
+        function validateLineContact(showMessage) {
+          if (!tel || !email) return true;
+          tel.setCustomValidity('');
+          email.setCustomValidity('');
+          if (getContactMethod() !== 'LINE') return true;
+          if (tel.value.trim() !== '' || email.value.trim() !== '') return true;
+          if (showMessage) {
+            tel.setCustomValidity('LINEをご希望の場合は、念のため電話番号かメールアドレスのどちらかを入力してください。');
+          }
+          return false;
+        }
+
+        methodChoices.forEach(function (choice) {
+          choice.addEventListener('change', updateContactRequired);
+        });
+        updateContactRequired();
+        if (tel) tel.addEventListener('input', function () { validateLineContact(false); });
+        if (email) email.addEventListener('input', function () { validateLineContact(false); });
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          updateContactRequired();
+          // 自動送信（スパム）対策：見えない欄が埋まっていたら送信しない
+          var hp = form.querySelector('input[name="website"]');
+          if (hp && hp.value.trim() !== '') {
+            form.hidden = true;
+            var t0 = document.getElementById('formThanks');
+            if (t0) { t0.hidden = false; }
+            return;
+          }
+          validateLineContact(true);
+          if (!form.reportValidity()) return;
+          var btn = form.querySelector('.form-submit');
+          if (btn) { btn.disabled = true; btn.textContent = '送信中…'; }
+          fetch(SAMPLE_FORM_ENDPOINT, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new URLSearchParams(new FormData(form))
+          }).catch(function () {}).finally(function () {
+            form.hidden = true;
+            var thanks = document.getElementById('formThanks');
+            if (thanks) { thanks.hidden = false; thanks.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

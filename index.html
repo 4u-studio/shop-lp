@@ -1400,6 +1400,17 @@
       .compare tbody td { font-size: 14.5px; }
       .compare thead th, .compare tbody th, .compare tbody td { padding-top: 13px; padding-bottom: 13px; }
       .works-grid { grid-template-columns: repeat(3, 1fr); }
+      .work .thumb {
+        aspect-ratio: 1 / 1;
+      }
+      .work img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .work:nth-child(1) img { object-position: center center; }
+      .work:nth-child(2) img { object-position: center center; }
+      .work:nth-child(3) img { object-position: center center; }
       .about-card {
         display: grid;
         grid-template-columns: minmax(160px, 190px) minmax(0, 1fr);

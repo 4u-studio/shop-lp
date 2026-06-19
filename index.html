@@ -224,7 +224,7 @@
       color: #fff;
       background: var(--orange);
       border-radius: 8px;
-      transition: background-color .18s ease, transform .12s ease;
+      transition: background-color .18s ease, box-shadow .18s ease, transform .12s ease;
     }
     .header-cta:hover { background: var(--orange-dark); }
     .header-cta:active { transform: translateY(1px); }
@@ -251,6 +251,7 @@
       font-weight: 500;
       color: var(--ink);
       border-radius: 8px;
+      transition: background-color .16s ease, color .16s ease, transform .12s ease;
     }
     .nav a:hover { background: rgba(46, 125, 116, .06); color: var(--teal-ink); }
     .nav a.active { color: var(--teal-ink); font-weight: 700; background: rgba(46, 125, 116, .09); }
@@ -314,7 +315,7 @@
       white-space: normal;
       border-radius: 10px;
       cursor: pointer;
-      transition: background-color .18s ease, transform .12s ease;
+      transition: background-color .18s ease, box-shadow .18s ease, transform .12s ease;
     }
     .btn.primary {
       color: #fff;
@@ -323,6 +324,15 @@
     }
     .btn.primary:hover { background: var(--orange-dark); }
     .btn.primary:active { transform: translateY(1px); }
+    .btn:focus-visible,
+    .btn-line:focus-visible,
+    .header-cta:focus-visible,
+    .nav a:focus-visible,
+    .work-link:focus-visible {
+      outline: 3px solid rgba(78, 154, 145, .72);
+      outline-offset: 3px;
+      box-shadow: 0 0 0 5px rgba(78, 154, 145, .14);
+    }
     .btn .arrow {
       width: 8px; height: 8px; flex: 0 0 auto;
       border-top: 2px solid currentColor;
@@ -503,7 +513,7 @@
       margin: 24px auto 0;
       max-width: 34em;
       font-size: 12.5px;
-      color: var(--faint);
+      color: var(--muted);
       line-height: 1.85;
       text-align: center;
     }
@@ -628,7 +638,7 @@
       padding: 0;
       list-style: none;
       font-size: 12.5px;
-      color: var(--faint);
+      color: var(--muted);
       line-height: 1.7;
       text-align: center;
     }
@@ -720,7 +730,7 @@
       margin: 12px auto 0;
       max-width: 30em;
       font-size: 11.5px;
-      color: var(--faint);
+      color: var(--muted);
       text-align: center;
       line-height: 1.7;
     }
@@ -908,6 +918,7 @@
       line-break: strict;
       word-break: keep-all;
       overflow-wrap: normal;
+      transition: background-color .18s ease, box-shadow .18s ease, color .18s ease, transform .12s ease;
     }
     .work-link:hover { background: rgba(46, 125, 116, .13); color: var(--teal-ink); }
     .work-link:active { transform: translateY(1px); }
@@ -992,6 +1003,11 @@
       transition: background-color .15s ease;
     }
     .faq summary:hover { background: rgba(46, 125, 116, .04); }
+    .faq summary:focus-visible {
+      outline: none;
+      background: rgba(46, 125, 116, .06);
+      box-shadow: inset 0 0 0 3px rgba(78, 154, 145, .42);
+    }
     .faq summary::-webkit-details-marker { display: none; }
     .faq summary .q {
       flex: 0 0 auto;
@@ -1165,16 +1181,21 @@
       background-position: right 14px center;
     }
     .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--teal-2); }
-    .field input:focus, .field select:focus, .field textarea:focus,
-    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+    .field input:focus, .field select:focus, .field textarea:focus {
       outline: none;
       border-color: var(--teal);
       box-shadow: 0 0 0 3px rgba(46, 125, 116, .15);
     }
+    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+      outline: 3px solid rgba(78, 154, 145, .72);
+      outline-offset: 2px;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 5px rgba(78, 154, 145, .13);
+    }
     .form-submit { width: 100%; max-width: none; margin-top: 6px; }
     .form-submit:disabled { opacity: .65; cursor: default; }
-    .form-mini { margin: 12px 0 0; text-align: center; font-size: 12px; color: var(--faint); }
-    .form-privacy { margin: 10px 0 0; text-align: center; font-size: 11.5px; line-height: 1.7; color: var(--faint); }
+    .form-mini { margin: 12px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
+    .form-privacy { margin: 10px 0 0; text-align: center; font-size: 11.5px; line-height: 1.7; color: var(--muted); }
     .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .form-intro {
       margin: 0 0 20px;
@@ -1238,7 +1259,11 @@
     }
     .choice span:hover { border-color: var(--teal-2); }
     .choice input:checked + span { background: rgba(46, 125, 116, .1); border-color: var(--teal); color: var(--teal-ink); font-weight: 700; }
-    .choice input:focus-visible + span { outline: 3px solid var(--teal-2); outline-offset: 2px; }
+    .choice input:focus-visible + span {
+      outline: 3px solid rgba(78, 154, 145, .72);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(78, 154, 145, .12);
+    }
 
     .form-details {
       margin: 6px 0 16px;
@@ -1259,6 +1284,11 @@
       font-weight: 700;
       font-size: 14px;
       color: var(--teal-ink);
+    }
+    .form-details > summary:focus-visible {
+      outline: none;
+      background: rgba(46, 125, 116, .06);
+      box-shadow: inset 0 0 0 3px rgba(78, 154, 145, .42);
     }
     .form-details > summary::-webkit-details-marker { display: none; }
     .form-details > summary::after {
@@ -1351,6 +1381,32 @@
       .work:focus-within img {
         transform: scale(1.028);
       }
+    }
+
+    @media (hover: none) {
+      .nav a:hover { background: transparent; color: var(--ink); }
+      .nav a.active:hover { color: var(--teal-ink); background: rgba(46, 125, 116, .09); }
+      .nav .nav-line:hover,
+      .nav .nav-line.active:hover,
+      .footer .btn-line:hover,
+      .btn-line:hover {
+        color: #fff;
+        background: var(--line-green);
+        border-color: var(--line-green);
+      }
+      .nav .nav-cta:hover,
+      .nav .nav-cta.active:hover,
+      .btn.primary:hover,
+      .footer .footer-sample:hover {
+        color: #fff;
+        background: var(--orange);
+      }
+      .work-link:hover {
+        color: var(--teal-ink);
+        background: rgba(46, 125, 116, .08);
+        box-shadow: none;
+      }
+      .faq summary:hover { background: transparent; }
     }
 
     /* ---------- responsive (desktop) ---------- */

@@ -192,6 +192,11 @@
       backdrop-filter: blur(12px);
       background: rgba(251, 250, 245, .9);
       border-bottom: 1px solid var(--line-2);
+      transition: box-shadow .2s ease, background-color .2s ease;
+    }
+    .header.is-scrolled {
+      box-shadow: 0 6px 20px rgba(33, 45, 43, .07);
+      background: rgba(251, 250, 245, .96);
     }
     .header-inner {
       display: flex;
@@ -825,7 +830,7 @@
       box-shadow: var(--shadow-sm);
       overflow: hidden;
     }
-    .work .thumb { position: relative; flex: 0 0 auto; }
+    .work .thumb { position: relative; flex: 0 0 auto; overflow: hidden; }
     .work .thumb::after {
       content: "";
       position: absolute;
@@ -835,7 +840,13 @@
       pointer-events: none;
     }
     .work.is-real { border-color: rgba(46, 125, 116, .4); box-shadow: var(--shadow); }
-    .work img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--bg-2); }
+    .work img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: var(--bg-2);
+      transition: transform .35s ease-out;
+    }
     .work-label {
       position: absolute;
       top: 12px; left: 12px;
@@ -1279,6 +1290,60 @@
     .btn-line:active { transform: translateY(1px); }
     .btn-line svg { width: 18px; height: 18px; color: currentColor; }
 
+    /* ---------- subtle motion ---------- */
+    html.js-reveal-ready .reveal-section,
+    html.js-reveal-ready .reveal-soft,
+    html.js-reveal-ready .reveal-item {
+      opacity: 0;
+      transform: translateY(var(--reveal-y, 14px));
+      transition:
+        opacity var(--reveal-duration, .55s) cubic-bezier(0.22, 1, 0.36, 1),
+        transform var(--reveal-duration, .55s) cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    html.js-reveal-ready .reveal-soft {
+      --reveal-y: 8px;
+      --reveal-duration: .62s;
+    }
+    html.js-reveal-ready .reveal-section.is-visible,
+    html.js-reveal-ready .reveal-soft.is-visible,
+    html.js-reveal-ready .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    html.js-reveal-ready .plan.featured.reveal-item {
+      transform: translateY(var(--reveal-y, 14px)) scale(1.035);
+    }
+    html.js-reveal-ready .plan.featured.reveal-item.is-visible {
+      transform: translateY(0) scale(1.035);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .btn:hover,
+      .btn-line:hover,
+      .work-link:hover,
+      .nav .nav-line:hover,
+      .nav .nav-cta:hover,
+      .header-cta:hover {
+        transform: translateY(-2px);
+      }
+      .btn.primary:hover,
+      .footer .footer-sample:hover {
+        box-shadow: 0 10px 22px rgba(217, 127, 71, .30);
+      }
+      .btn-line:hover,
+      .footer .btn-line:hover {
+        box-shadow: 0 9px 20px rgba(6, 199, 85, .20);
+      }
+      .work-link:hover {
+        box-shadow: 0 8px 18px rgba(46, 125, 116, .10);
+      }
+      .work:hover img,
+      .work:focus-within img {
+        transform: scale(1.028);
+      }
+    }
+
     /* ---------- responsive (desktop) ---------- */
     @media (min-width: 700px) {
       .section { padding: 92px 0; }
@@ -1382,7 +1447,21 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      html.js-reveal-ready .reveal-section,
+      html.js-reveal-ready .reveal-soft,
+      html.js-reveal-ready .reveal-item,
+      html.js-reveal-ready .plan.featured.reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .work img { transform: none; }
     }
   </style>
 </head>
@@ -2009,6 +2088,86 @@
   </footer>
 
   <script>
+    /* 控えめな表示演出・ヘッダー影。失敗しても内容は通常表示されます。 */
+    (function () {
+      var header = document.querySelector('.header');
+      if (header) {
+        var headerTicking = false;
+        function setHeaderShadow() {
+          header.classList.toggle('is-scrolled', window.scrollY > 32);
+        }
+        window.addEventListener('scroll', function () {
+          if (!headerTicking) {
+            headerTicking = true;
+            requestAnimationFrame(function () {
+              setHeaderShadow();
+              headerTicking = false;
+            });
+          }
+        }, { passive: true });
+        window.addEventListener('load', setHeaderShadow);
+        setHeaderShadow();
+      }
+
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+      try {
+        var root = document.documentElement;
+        var isMobile = window.matchMedia && window.matchMedia('(max-width: 699px)').matches;
+        var stepDelay = isMobile ? 25 : 70;
+        var maxDelay = isMobile ? 80 : 240;
+        root.classList.add('js-reveal-ready');
+
+        function addRevealClass(list, className) {
+          list.forEach(function (el) {
+            if (el) el.classList.add(className);
+          });
+        }
+
+        addRevealClass(Array.prototype.slice.call(document.querySelectorAll('.hero-eyebrow, .hero-sub, .badges, .hero-visual .frame, .hero-visual .caption')), 'reveal-soft');
+        addRevealClass(Array.prototype.slice.call(document.querySelectorAll('.section > .wrap')), 'reveal-section');
+
+        [
+          '.grid.cols-2 .worry',
+          '.grid.cols-3 .reason',
+          '.flow-list .step',
+          '.price-grid .plan',
+          '.can-grid .can-item',
+          '.works-grid .work'
+        ].forEach(function (selector) {
+          document.querySelectorAll(selector).forEach(function (el, index) {
+            el.classList.add('reveal-item');
+            el.style.setProperty('--reveal-delay', Math.min(index * stepDelay, maxDelay) + 'ms');
+          });
+        });
+
+        var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.reveal-section, .reveal-soft, .reveal-item'));
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -5% 0px'
+        });
+
+        revealTargets.forEach(function (el) { observer.observe(el); });
+
+        window.setTimeout(function () {
+          revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+        }, 2500);
+      } catch (e) {
+        document.documentElement.classList.remove('js-reveal-ready');
+        document.querySelectorAll('.reveal-section, .reveal-soft, .reveal-item').forEach(function (el) {
+          el.classList.remove('reveal-section', 'reveal-soft', 'reveal-item');
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+
     (function () {
       var sec = document.getElementById('price');
       if (!sec) return;

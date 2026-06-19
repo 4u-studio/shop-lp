@@ -111,6 +111,28 @@
       border-radius: 4px;
     }
 
+    .skip-to-content {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      transform: translateY(-150%);
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--teal-ink);
+      color: #fff;
+      font-family: var(--head);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+      transition: transform .16s ease;
+    }
+    .skip-to-content:focus,
+    .skip-to-content:focus-visible {
+      transform: translateY(0);
+      outline-color: var(--orange);
+    }
+
     /* ---------- layout ---------- */
     .wrap {
       width: 100%;
@@ -689,6 +711,14 @@
       color: var(--faint);
       text-align: center;
       line-height: 1.7;
+    }
+    .compare-note {
+      margin: 10px auto 0;
+      max-width: 38em;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.75;
     }
 
     /* billing toggle (month / year) */
@@ -1356,7 +1386,8 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
+  <a class="skip-to-content" href="#main-content">本文へ移動</a>
   <header class="header">
     <div class="wrap header-inner">
       <a class="logo" href="#top">合同会社4U</a>
@@ -1373,7 +1404,7 @@
     </div>
   </header>
 
-  <main id="top">
+  <main id="main-content" tabindex="-1">
 
     <!-- 1. ファーストビュー -->
     <section class="hero">
@@ -1394,7 +1425,7 @@
           </div>
           <div class="hero-visual">
             <div class="frame">
-              <img src="assets/hero-shop-local-v1.png" alt="小さなお店の前でスマートフォンのホームページを確認しているイメージ">
+              <img src="assets/hero-shop-local-v1.webp" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" alt="小さなお店の前でスマートフォンのホームページを確認しているイメージ">
             </div>
             <p class="caption">※ イメージ写真</p>
           </div>
@@ -1606,6 +1637,7 @@
             </table>
           </div>
           <p class="compare-legend">○：対応／—：なし／応相談：内容に応じてご相談します。</p>
+          <p class="compare-note">※ 検索やAIに見つけてもらいやすくするための基本的な設定を行います。検索順位を保証するものではありません。</p>
         </div>
 
         <ul class="price-note">
@@ -1673,7 +1705,7 @@
         <div class="works-grid">
           <article class="work is-real">
             <div class="thumb">
-              <img src="assets/work-juku.png" alt="個別指導塾 free のホームページ">
+              <img src="assets/work-juku.webp" width="738" height="228" loading="lazy" decoding="async" alt="個別指導塾 free のホームページ">
               <span class="work-label real">制作実績</span>
             </div>
             <div class="work-body">
@@ -1684,7 +1716,7 @@
           </article>
           <article class="work">
             <div class="thumb">
-              <img src="assets/work-salon.png" alt="美容室・サロン向けのデザイン見本">
+              <img src="assets/work-salon.webp" width="738" height="201" loading="lazy" decoding="async" alt="美容室・サロン向けのデザイン見本">
               <span class="work-label sample">架空サンプル</span>
             </div>
             <div class="work-body">
@@ -1694,7 +1726,7 @@
           </article>
           <article class="work">
             <div class="thumb">
-              <img src="assets/work-restaurant.png" alt="飲食店向けのデザイン見本">
+              <img src="assets/work-restaurant.webp" width="738" height="201" loading="lazy" decoding="async" alt="飲食店向けのデザイン見本">
               <span class="work-label sample">デザイン見本</span>
             </div>
             <div class="work-body">
@@ -1713,7 +1745,7 @@
         <span class="eyebrow">ABOUT</span>
         <h2 class="sec-title">「最初の一歩」を、いっしょに。</h2>
         <div class="about-card">
-          <img class="portrait" src="assets/about-portrait.png" alt="合同会社4U 代表 土屋裕二の写真">
+          <img class="portrait" src="assets/about-portrait.webp" width="720" height="960" loading="lazy" decoding="async" alt="合同会社4U 代表 土屋裕二の写真">
           <div class="about-body">
             <div class="about-name">
               <strong>土屋 裕二</strong>
@@ -1769,7 +1801,7 @@
       <div class="wrap">
         <span class="eyebrow">CONTACT</span>
         <h2 class="sec-title">ホームページの無料サンプルを申し込む</h2>
-        <p class="sec-lead">かんたんな質問にお答えください。内容をもとに、2〜3日以内に無料サンプルを作成し、確認用リンク（数日間の限定公開）をお送りします。気に入ったら本制作へ。気に入らなければ、お断りいただいて大丈夫です。</p>
+        <p class="sec-lead">かんたんな質問にお答えください。内容をもとに、2〜3日ほどで無料サンプルを作成し、確認用リンク（数日間の限定公開）をお送りします。気に入ったら本制作へ。気に入らなければ、お断りいただいて大丈夫です。</p>
 
         <div class="form-card">
           <p class="form-intro">分かる範囲だけで大丈夫です。InstagramやGoogleマップ、今のホームページがあれば、こちらで内容を確認しながら、無料サンプルをお作りします。</p>
@@ -1921,7 +1953,7 @@
           <div class="form-thanks" id="formThanks" hidden>
             <span class="thanks-ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg></span>
             <h3>ありがとうございます。</h3>
-            <p>内容を確認し、2〜3日以内に無料サンプルの確認リンクをお送りします。</p>
+            <p>内容を確認し、2〜3日ほどで無料サンプルの確認リンクをお送りします。</p>
           </div>
         </div>
 

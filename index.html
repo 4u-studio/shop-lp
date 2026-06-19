@@ -333,6 +333,12 @@
 
     /* ---------- hero ---------- */
     .hero { padding: 44px 0 56px; }
+    .hero-top {
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-lead { order: 1; }
+    .hero-visual { order: 2; }
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -388,7 +394,7 @@
 
     .hero-visual {
       position: relative;
-      margin-top: 36px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -405,7 +411,8 @@
       position: relative;
       z-index: 1;
       width: 100%;
-      max-width: 430px;
+      max-width: 380px;
+      aspect-ratio: 4 / 3;
       padding: 10px;
       background: var(--card);
       border: 1px solid var(--line);
@@ -415,9 +422,9 @@
     }
     .hero-visual img {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      height: 100%;
       object-fit: cover;
-      object-position: 58% 50%;
+      object-position: 62% 50%;
       border-radius: 16px;
     }
     .hero-visual .caption {
@@ -914,9 +921,11 @@
       overflow: hidden;
     }
     .about-card .portrait {
-      width: min(72%, 280px);
+      width: min(72%, 250px);
+      height: min(340px, 80vw);
+      max-height: 340px;
       margin: 24px auto 0;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center top;
       border-radius: 12px;
@@ -1350,10 +1359,18 @@
       .sec-title { font-size: 31px; margin-bottom: 18px; }
       .sec-lead { margin-bottom: 48px; }
       .hero { padding: 64px 0 80px; }
-      .hero-top { display: grid; grid-template-columns: 1.12fr .88fr; gap: 44px; align-items: center; }
+      .hero-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr);
+        gap: 44px;
+        align-items: center;
+      }
+      .hero-lead,
+      .hero-visual { order: initial; }
       .hero-visual { margin-top: 0; }
       .hero-visual .frame { max-width: 430px; }
-      .hero-visual img { aspect-ratio: 5 / 4; object-position: 60% 50%; }
+      .hero-visual .frame { aspect-ratio: 5 / 4; }
+      .hero-visual img { object-position: 60% 50%; }
       .hero h1 { font-size: 31px; }
       .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
       .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
@@ -1394,6 +1411,7 @@
         align-self: start;
         justify-self: start;
         width: 100%;
+        max-height: none;
         height: auto;
         min-height: 0;
         aspect-ratio: 3 / 4;
@@ -1404,7 +1422,28 @@
       .about-body { padding: 0; }
     }
 
+    @media (min-width: 1200px) {
+      .hero .wrap {
+        max-width: 1080px;
+      }
+      .hero-top {
+        grid-template-columns: minmax(500px, 540px) minmax(360px, 420px);
+        gap: 64px;
+        justify-content: center;
+      }
+      .hero-visual .frame {
+        max-width: 420px;
+      }
+    }
+
     @media (max-width: 480px) {
+      .hero { padding-top: 34px; }
+      .hero-visual .frame {
+        max-width: 350px;
+      }
+      .hero-visual img {
+        object-position: 64% 50%;
+      }
       .about-body {
         padding: 24px 18px 28px;
       }
@@ -1439,6 +1478,9 @@
     @media (max-width: 360px) {
       .wrap { padding: 0 18px; }
       .hero h1 { font-size: 26px; }
+      .hero-visual .frame { max-width: 312px; }
+      .hero-visual img { max-height: 320px; }
+      .about-card .portrait { width: min(76%, 238px); max-height: 320px; }
       .sec-title { font-size: 22px; }
       .step { grid-template-columns: 50px 1fr; gap: 12px; }
       .step-body { gap: 10px; }

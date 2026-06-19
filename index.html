@@ -749,12 +749,17 @@
     .can-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
     .can-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
-      padding: 15px 16px;
+      padding: 16px;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
+    }
+    .can-copy {
+      min-width: 0;
+      display: grid;
+      gap: 4px;
     }
     .can-ico {
       flex: 0 0 auto;
@@ -769,7 +774,15 @@
     }
     .can-item:nth-child(even) .can-ico { background: rgba(224, 138, 83, .12); color: var(--orange-dark); }
     .can-ico svg { width: 23px; height: 23px; }
-    .can-item span { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.5; }
+    .can-item-title { font-size: 14.5px; font-weight: 700; color: var(--teal-ink); line-height: 1.5; }
+    .can-item p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--muted);
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
 
     /* ---------- works ---------- */
     .works-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
@@ -1606,27 +1619,45 @@
           <div class="can-grid">
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span>
-              <span>スマホ対応</span>
+              <div class="can-copy">
+                <span class="can-item-title">スマホ対応</span>
+                <p>スマホで見ても、文字や写真がきれいに整います。多くのお客様はスマホで見るので、ここが大切です。</p>
+              </div>
             </div>
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></span>
-              <span>メニュー掲載</span>
+              <div class="can-copy">
+                <span class="can-item-title">メニュー・料金の掲載</span>
+                <p>メニューや料金を、見やすく一覧で。「いくらかかるの？」にきちんと答えられます。</p>
+              </div>
             </div>
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-4 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
-              <span>問い合わせ受付</span>
+              <div class="can-copy">
+                <span class="can-item-title">問い合わせ受付</span>
+                <p>LINEやフォーム（入力画面）から、お客様が気軽に連絡できます。</p>
+              </div>
             </div>
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
-              <span>地図連携</span>
+              <div class="can-copy">
+                <span class="can-item-title">地図連携</span>
+                <p>Googleマップと連携し、お店の場所をすぐに案内できます。</p>
+              </div>
             </div>
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
-              <span>検索・AIの基本対策</span>
+              <div class="can-copy">
+                <span class="can-item-title">検索・AIの基本対策</span>
+                <p>検索やAIで見つけてもらいやすくするための、基本的な調整をします。</p>
+              </div>
             </div>
             <div class="can-item">
               <span class="can-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg></span>
-              <span>公開後の更新</span>
+              <div class="can-copy">
+                <span class="can-item-title">公開後の更新</span>
+                <p>営業時間やメニューが変わっても大丈夫。公開後の変更も、こちらで承ります。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1690,8 +1721,8 @@
             </div>
             <p>沼田には、いいお店がたくさんあります。</p>
             <p>でも、その魅力がうまく伝わっていないことも多いと感じます。お店の良さが知られていないのは、もったいないことです。</p>
-            <p>私自身、沼田市で個別指導塾 free を始めたとき、同じ壁にぶつかりました。何から手をつければいいか分からず、結局できたのはInstagramアカウントを作ることだけ。だからこそ、同じように悩むお店の力になりたいと思いました。</p>
-            <p>これまで合同会社4Uでは、YouTubeチャンネルやSNSの運用、動画編集など、「伝える」仕事に取り組んできました。その経験を、今度はお店のホームページづくりに活かしたいと考えています。</p>
+            <p>私自身、沼田市で個別指導塾 free を始めたとき、同じ壁にぶつかりました。何から手をつければいいか分からず、結局できたのはInstagramを作ることだけ。だからこそ、同じように悩むお店の力になりたいと思いました。</p>
+            <p>これまで合同会社4Uでは、YouTubeチャンネルの運用や動画編集、SNSの運用など、「伝える」お仕事に取り組んできました。その力を、今度はお店のホームページづくりに活かしたいと考えています。</p>
             <p>お店の魅力がしっかり伝わることは、沼田という町の良さを伝えることにもつながります。私は、その魅力を伝えるお手伝いをしたいと思っています。</p>
             <p>まずは無料サンプルからご覧ください。気に入らなければ、お断りいただいて大丈夫です。</p>
           </div>
